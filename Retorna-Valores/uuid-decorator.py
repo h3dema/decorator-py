@@ -3,6 +3,7 @@ import uuid
 import time
 import os
 
+
 def log_parametros(func):
 
     def wrapper(*args, **kwargs):
@@ -18,7 +19,7 @@ def log_parametros(func):
     return wrapper
 
 @log_parametros
-def gen_unique_fname(fname: str):
+def gen_unique_fname(fname: str) -> str:
     """
         esta função recebe um nome de arquivo no formato "nome_arquivo.extensao"
         e retorna "nome_arquivo_xxxx-xxxx--xxxx.extensao"
@@ -30,9 +31,9 @@ def gen_unique_fname(fname: str):
     new_fname = os.path.join(dirname, basename)
     return new_fname
 
+
 if __name__ == "__main__":
-    # problema 1 - queremos passar o nome da pessoa aqui
-    # my_func("João")
+    # passamos em fname a base do nome do arquivo
     print("Nome do arquivo:", gen_unique_fname(fname="image.png"))
 
     print("Nome do arquivo:", gen_unique_fname(fname="image"))
