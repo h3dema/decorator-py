@@ -11,6 +11,8 @@ Decorator é um método interessante que permite adicionar funcionalidades a um 
 - Decorators
 	+ contem os exemplos (passos) utilizados para criação do decorator que faz uma função ser executada periodicamente
 	+ `no_decorator.py` contem o código inicial da ideia para o decorator
+	+ `decorator_0x.py` sequencia de criacao do decorator
+	+ `decoratorplus.py` exemplo de funcao com 2 decorators.
 
 - Retorna-Valores
 	+ Exemplo de como permitir que uma função decorada retorne valores
