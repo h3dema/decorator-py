@@ -9,6 +9,8 @@ def timely(func):
 
     # podemos tornar mais genérico usando args/kwargs
     def call_func(*args, **kwargs):
+        # print("args  :", args)
+        # print("kwargs:", kwargs)
         # passa o nome para a função
         func(*args, **kwargs)
         # mas precisa colocar também nos argumentos de Timer()

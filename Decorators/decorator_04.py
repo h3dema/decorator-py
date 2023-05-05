@@ -16,6 +16,8 @@ def timely(periodo: int = 5):
         # podemos tornar mais genérico usando args/kwargs
         def call_func(*args, **kwargs):
             # passa o nome para a função
+            # nome pode ser o primeiro valor em args
+            # ou pode estar no dicionario em kwargs se o parametro foi nomeado
             func(*args, **kwargs)
             # mas precisa colocar também nos argumentos de Timer()
             threading.Timer(periodo, call_func, args=args, kwargs=kwargs).start()
@@ -25,29 +27,11 @@ def timely(periodo: int = 5):
     return timely_internal
 
 
-def log_parametros(func):
-
-    def wrapper(*args, **kwargs):
-        print("*" * 40)
-        print(f"Função iniciada em {datetime.now().strftime('%H:%M:%S')}")
-        if "name" in kwargs:
-            print("NOME:", kwargs["name"])
-        else:
-            print("NOME não foi definido")
-            print("Args:", args)
-        print("*" * 40)
-        func(*args, **kwargs)
-
-    return wrapper
-
-# problema 3 - queremos logar o parametro passado para a função my_func()
 # problema 2 - queremos alterar o periodo de Timer()
-@log_parametros
 @timely(periodo=1)
 def my_func(name):
     print(f"Hello, {name} @ {datetime.now().strftime('%H:%M:%S')}")
 
 if __name__ == "__main__":
     # problema 1 - queremos passar o nome da pessoa aqui
-    # my_func("João")
-    my_func(name="João")
+    my_func("João")

@@ -15,7 +15,7 @@ def timely(func):
 
 
 @timely
-def my_func(name: str = ""):
+def my_func(name: str = "xxxx"):
     print(f"Hello, {name} @ {datetime.now().strftime('%H:%M:%S')}")
 
 if __name__ == "__main__":
