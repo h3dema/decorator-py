@@ -26,6 +26,7 @@ def log_parametros(func):
 def my_func(name):
     print(f"Hello, {name} @ {datetime.now().strftime('%H:%M:%S')}")
 
+
 if __name__ == "__main__":
     # problema 1 - queremos passar o nome da pessoa aqui
     # my_func("João")

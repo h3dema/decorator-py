@@ -1,6 +1,7 @@
 from datetime import datetime
 import threading
 
+
 #
 # decorator é basicamente um wrapper de outra função
 # que devolver a função com as funcionalidades adicionais
@@ -31,6 +32,7 @@ def timely(periodo: int = 5):
 @timely(periodo=1)
 def my_func(name):
     print(f"Hello, {name} @ {datetime.now().strftime('%H:%M:%S')}")
+
 
 if __name__ == "__main__":
     # problema 1 - queremos passar o nome da pessoa aqui
