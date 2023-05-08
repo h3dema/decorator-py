@@ -34,4 +34,5 @@ def my_func(name):
 
 if __name__ == "__main__":
     # problema 1 - queremos passar o nome da pessoa aqui
+    # print(my_func)
     my_func("João")

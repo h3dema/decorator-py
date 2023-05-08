@@ -5,7 +5,7 @@ def plus_one(number):
 
     # função interna
     def mais_valor(number: int, constante: int = 1) -> int:
-        return number + 1
+        return number + constante
 
     result = mais_valor(number)
     return result
@@ -21,4 +21,4 @@ if __name__ == "__main__":
             print("mais_valor", mais_valor(1))
         NameError: name 'mais_valor' is not defined
     """
-    print("mais_valor", mais_valor(1))
+    # print("mais_valor", mais_valor(1))

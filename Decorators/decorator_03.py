@@ -32,4 +32,4 @@ def my_func(name):
 
 if __name__ == "__main__":
     # problema 1 - queremos passar o nome da pessoa aqui
-    my_func("João")
+    my_func(name="João")
